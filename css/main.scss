@@ -1,18 +1,98 @@
+@import 'variables'; 
+@import 'mixins'; 
+
 body {
     font-size: 15px;
     color: black;
-    font-family: museo-sans, sans-serif;
+    font-family: 'museo-sans', sans-serif;
 }
-
 h1 {
-    font-size: 3em;
+    font-size: 3.7em;
+    font-family: 'ButlerRegular', serif;
+    font-weight: 500;
+    line-height: 1em;
+    margin-bottom: 0.5em;
 }
 h2 {
-    font-size: 2em;
+    font-size: 2.8em;
+    font-family: 'ButlerRegular', serif;
+    margin-bottom: 0.5em;
 }
 h3 {
-    font-size: 1.8em;
+    font-size: 1.4em;
 }
 h4 {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+main {
+    padding-top: 55px;
+}
+.btn,
+.btn-lg {
+    @include rounded-corners(4px);
+    @include shadow-custom(0 1px 1px 0 rgba(0, 0, 0, 0.4));
+    background-color: $primary-colour;
+    font-weight: 200;
+}
+.btn-lg {
+    font-size: 1.17em;
+}
+
+.navbar-light {
+    @include shadow;
+    .navbar-nav .nav-link {
+        color: black;
+    }    
+}
+
+.card {
+    @include shadow;
+    @include rounded-corners(4px);
+    padding: $card-padding;
+}
+
+section.headline {
+    background-color: #842D1B;
+    color: white;
+    padding: 6% 0;
+    h4 {
+        font-weight: 200;
+        margin-bottom: 1.5em;
+    }
+}
+
+section.services {
+    padding-bottom: 2em;
+    .service {
+        @include rounded-corners(4px);
+        background-color: #F4F1EE;
+        padding: $card-padding;
+        margin-bottom: 1.5em;
+    }
+    h2 {
+        color: $primary-colour;
+        margin: 1em 0;
+    }    
+    h3 {
+        color: $primary-colour;
+        margin: 1em 0;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+section.mission {
+    background: lightgray;
+    padding: 3.5em 0;
+    .mission-statement {
+        @include rounded-corners(4px);
+        background-color: rgba(33,38,54,0.5);
+        color: white;
+        padding: $card-padding;
+        p {
+            margin-bottom: 0;
+        }
+    }
 }
