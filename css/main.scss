@@ -46,6 +46,10 @@ main {
     }    
 }
 
+.no-margin {
+    margin: 0;
+}
+
 .card {
     @include shadow;
     @include rounded-corners(4px);
@@ -68,7 +72,7 @@ section.services {
         @include rounded-corners(4px);
         background-color: #F4F1EE;
         padding: $card-padding;
-        margin-bottom: 1.5em;
+        margin-bottom: $card-margin-bottom;
     }
     h2 {
         color: $primary-colour;
@@ -77,9 +81,6 @@ section.services {
     h3 {
         color: $primary-colour;
         margin: 1em 0;
-    }
-    p {
-        margin: 0;
     }
 }
 
@@ -91,8 +92,24 @@ section.mission {
         background-color: rgba(33,38,54,0.5);
         color: white;
         padding: $card-padding;
-        p {
-            margin-bottom: 0;
-        }
+    }
+}
+
+section.about {
+    background-color: #F4F1EE;
+    padding: 3.5em 0;
+    text-align: center;
+    .container {
+        max-width: 740px;
+    }
+}
+
+section.testimonials {
+    padding: 3.5em 0;
+    h2 {
+        color: white;
+    }
+    .quote {
+        margin-bottom: $card-margin-bottom;
     }
 }

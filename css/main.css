@@ -48,6 +48,9 @@ main {
   .navbar-light .navbar-nav .nav-link {
     color: black; }
 
+.no-margin {
+  margin: 0; }
+
 .card {
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
@@ -80,8 +83,6 @@ section.services {
   section.services h3 {
     color: #E46F25;
     margin: 1em 0; }
-  section.services p {
-    margin: 0; }
 
 section.mission {
   background: lightgray;
@@ -93,7 +94,19 @@ section.mission {
     background-color: rgba(33, 38, 54, 0.5);
     color: white;
     padding: 1.3em; }
-    section.mission .mission-statement p {
-      margin-bottom: 0; }
+
+section.about {
+  background-color: #F4F1EE;
+  padding: 3.5em 0;
+  text-align: center; }
+  section.about .container {
+    max-width: 740px; }
+
+section.testimonials {
+  padding: 3.5em 0; }
+  section.testimonials h2 {
+    color: white; }
+  section.testimonials .quote {
+    margin-bottom: 1.5em; }
 
 /*# sourceMappingURL=main.css.map */
