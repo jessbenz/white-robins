@@ -46,6 +46,9 @@ main {
     }    
 }
 
+.caption {
+    font-size: 0.85em;
+}
 .no-margin {
     margin: 0;
 }
@@ -111,17 +114,12 @@ section.about {
     }
     .photo {
         @include rounded-corners(50%);
+        background: center center url("../images/Wendy.jpg") no-repeat;
+        background-size: cover;
         width: 120px;
         height: 120px;
-        overflow: hidden;
-        background: gray; 
-        text-align: center;   
         margin: -40px auto 25px auto; 
         border: 2px solid white;   
-        img {
-            width: 90%;
-            height: auto;
-        }
     }
     h2 {
         color: $primary-colour;
@@ -135,12 +133,95 @@ section.testimonials {
     background: top right url("../images/testimonials.jpg") no-repeat;
     background-size: cover;    
     padding: 7% 0;
+    padding-bottom: 280px;
     h2 {
         color: white;
         margin-bottom: 0.8em;
     }
     .quote {
-        margin-bottom: $card-margin-bottom;
-
+        .card {
+            margin-bottom: $card-margin-bottom;
+            position: relative;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -13px;
+                left: 20px;
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 13px 20px 0 0;
+                border-color: white transparent transparent transparent; 
+                z-index: 100;
+            }
+            &:after {
+                border-width: 15px 25px 0 0;
+                border-color: rgba(0,0,0,0.2) transparent transparent transparent;
+                left: 18px;
+                bottom: -16px;
+                z-index: 99;
+            }
+        }
+        .card.right-arrow {
+            & + .person {
+                span {
+                    float: right;
+                    margin-right: 0;
+                    margin-left: 12px;
+                }
+                p {
+                    text-align: right;
+                }                
+            }
+            &:before,
+            &:after {
+                left: auto;
+                right: 20px;
+                border-width: 0 20px 13px 0;
+                border-color: transparent white transparent transparent; 
+            }
+            &:after {
+                border-width: 0 25px 15px 0;
+                border-color: transparent rgba(0,0,0,0.2) transparent transparent;
+                right: 18px;
+            }
+        }
+        .person {
+            span {
+                @include rounded-corners(50%);
+                border: 2px solid white;
+                width: 60px;
+                height: 60px;
+                float: left;
+                margin-right: 12px;
+            }
+            p {
+                color: white;
+                margin: 0;
+                padding-top: 13px;                
+            }
+            #one {
+                background: center right url("../images/alan.jpg") no-repeat;
+            }
+            #two {
+                background: center right url("../images/elizabeth.jpg") no-repeat;
+            }
+            #three {
+                background: center right url("../images/nicola.jpg") no-repeat;
+            }                         
+        }
     }
+    .keep-me-posted {
+        max-width: 380px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: -200px;
+    }    
+}
+
+footer {
+    background-color: $primary-colour;
 }
