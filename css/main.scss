@@ -34,9 +34,23 @@ main {
     @include shadow-custom(0 1px 1px 0 rgba(0, 0, 0, 0.4));
     background-color: $primary-colour;
     font-weight: 200;
+    color: white;
+    min-width: 60px;
+    cursor: pointer;
+    &:hover {
+        background-color: #DE5B0D;
+    }
 }
 .btn-lg {
     font-size: 1.17em;
+}
+.form-control {
+    border-color: $input-border-colour;
+    background-color: $input-background-colour;
+    &:focus {
+        border-color: $primary-colour;
+        background-color: $input-background-colour;
+    }
 }
 
 .navbar-light {
@@ -46,11 +60,20 @@ main {
     }    
 }
 
+.left { 
+    float: left;
+}
+.right {
+    float: right;
+}
 .caption {
     font-size: 0.85em;
 }
 .no-margin {
     margin: 0;
+}
+.antispam {
+    display:none;
 }
 
 .card {
@@ -64,6 +87,9 @@ section.headline {
     background-size: cover;
     color: white;
     padding: 6% 0;
+    .btn {
+        margin-bottom: 20px;
+    }
     h4 {
         font-weight: 200;
         margin-bottom: 1.5em;
@@ -76,8 +102,8 @@ section.services {
         @include rounded-corners(4px);
         background-color: #F4F1EE;
         padding: $card-padding;
-        margin-bottom: 2emm;
-        height: 88%;
+        height: 89%;
+        margin-bottom: 1.8em;
         img {
             margin-top: -35px;
         }
@@ -133,7 +159,6 @@ section.testimonials {
     background: top right url("../images/testimonials.jpg") no-repeat;
     background-size: cover;    
     padding: 7% 0;
-    padding-bottom: 280px;
     h2 {
         color: white;
         margin-bottom: 0.8em;
@@ -191,7 +216,7 @@ section.testimonials {
         .person {
             span {
                 @include rounded-corners(50%);
-                border: 2px solid white;
+                border: 1px solid white;
                 width: 60px;
                 height: 60px;
                 float: left;
@@ -203,25 +228,70 @@ section.testimonials {
                 padding-top: 13px;                
             }
             #one {
-                background: center right url("../images/alan.jpg") no-repeat;
+                background: center center url("../images/alan.jpg") no-repeat;
+                background-size: cover;
             }
             #two {
-                background: center right url("../images/elizabeth.jpg") no-repeat;
+                background: center center url("../images/elizabeth.jpg") no-repeat;
+                background-size: cover;
             }
             #three {
-                background: center right url("../images/nicola.jpg") no-repeat;
+                background: center center url("../images/nicola.jpg") no-repeat;
+                background-size: cover;
             }                         
         }
+    }
+    hr {
+        max-width: 200px;
+        border-top: 1px solid rgba(255,255,255,0.6);
+        margin: 4em auto;
     }
     .keep-me-posted {
         max-width: 380px;
         text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: -200px;
+        margin: 2em auto -12em auto;
+        position: relative;
+        form {
+            label {
+                display: block;
+                text-align: left;
+            }
+            .form-control.left {
+                width: 75%;
+            }
+        }
+        img {
+            margin: -35px 0 1.3em 0;
+        }
     }    
 }
 
 footer {
+    padding: 9em 0 0 0;
     background-color: $primary-colour;
+    color: white;
+    text-align: center;
+    h3 {
+        margin: 0.7em 0 0 0;
+        font-size: 2.2em;
+        img {
+            vertical-align: top;
+            margin-top: -3px;
+        }        
+    }
+    h4 {
+        font-weight: 300;
+    }
+    a,
+    a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    .logo-strip {
+        @include shadow-custom(0 0 3px 0 rgba(0, 0, 0, 0.5));
+        margin-top: 1.5em;
+        background-color: white;
+        padding: 0.5em 0.5em 0.6em 0.5em;
+        color: black;
+    }
 }

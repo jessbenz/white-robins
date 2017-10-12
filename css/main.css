@@ -36,10 +36,23 @@ main {
   -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4);
   background-color: #E46F25;
-  font-weight: 200; }
+  font-weight: 200;
+  color: white;
+  min-width: 60px;
+  cursor: pointer; }
+  .btn:hover,
+  .btn-lg:hover {
+    background-color: #DE5B0D; }
 
 .btn-lg {
   font-size: 1.17em; }
+
+.form-control {
+  border-color: #A6A6A6;
+  background-color: #F7F7F7; }
+  .form-control:focus {
+    border-color: #E46F25;
+    background-color: #F7F7F7; }
 
 .navbar-light {
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
@@ -48,11 +61,20 @@ main {
   .navbar-light .navbar-nav .nav-link {
     color: black; }
 
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
 .caption {
   font-size: 0.85em; }
 
 .no-margin {
   margin: 0; }
+
+.antispam {
+  display: none; }
 
 .card {
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
@@ -68,6 +90,8 @@ section.headline {
   background-size: cover;
   color: white;
   padding: 6% 0; }
+  section.headline .btn {
+    margin-bottom: 20px; }
   section.headline h4 {
     font-weight: 200;
     margin-bottom: 1.5em; }
@@ -80,8 +104,8 @@ section.services {
     border-radius: 4px;
     background-color: #F4F1EE;
     padding: 1.3em;
-    margin-bottom: 2emm;
-    height: 88%; }
+    height: 89%;
+    margin-bottom: 1.8em; }
     section.services .service img {
       margin-top: -35px; }
   section.services h2 {
@@ -128,8 +152,7 @@ section.about {
 section.testimonials {
   background: top right url("../images/testimonials.jpg") no-repeat;
   background-size: cover;
-  padding: 7% 0;
-  padding-bottom: 280px; }
+  padding: 7% 0; }
   section.testimonials h2 {
     color: white;
     margin-bottom: 0.8em; }
@@ -173,7 +196,7 @@ section.testimonials {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 1px solid white;
     width: 60px;
     height: 60px;
     float: left;
@@ -183,19 +206,55 @@ section.testimonials {
     margin: 0;
     padding-top: 13px; }
   section.testimonials .quote .person #one {
-    background: center right url("../images/alan.jpg") no-repeat; }
+    background: center center url("../images/alan.jpg") no-repeat;
+    background-size: cover; }
   section.testimonials .quote .person #two {
-    background: center right url("../images/elizabeth.jpg") no-repeat; }
+    background: center center url("../images/elizabeth.jpg") no-repeat;
+    background-size: cover; }
   section.testimonials .quote .person #three {
-    background: center right url("../images/nicola.jpg") no-repeat; }
+    background: center center url("../images/nicola.jpg") no-repeat;
+    background-size: cover; }
+  section.testimonials hr {
+    max-width: 200px;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    margin: 4em auto; }
   section.testimonials .keep-me-posted {
     max-width: 380px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -200px; }
+    margin: 2em auto -12em auto;
+    position: relative; }
+    section.testimonials .keep-me-posted form label {
+      display: block;
+      text-align: left; }
+    section.testimonials .keep-me-posted form .form-control.left {
+      width: 75%; }
+    section.testimonials .keep-me-posted img {
+      margin: -35px 0 1.3em 0; }
 
 footer {
-  background-color: #E46F25; }
+  padding: 9em 0 0 0;
+  background-color: #E46F25;
+  color: white;
+  text-align: center; }
+  footer h3 {
+    margin: 0.7em 0 0 0;
+    font-size: 2.2em; }
+    footer h3 img {
+      vertical-align: top;
+      margin-top: -3px; }
+  footer h4 {
+    font-weight: 300; }
+  footer a,
+  footer a:hover {
+    color: white;
+    text-decoration: underline; }
+  footer .logo-strip {
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    margin-top: 1.5em;
+    background-color: white;
+    padding: 0.5em 0.5em 0.6em 0.5em;
+    color: black; }
 
 /*# sourceMappingURL=main.css.map */
