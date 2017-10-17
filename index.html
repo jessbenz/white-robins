@@ -5,6 +5,7 @@
   <meta charset="utf-8">
 
   <title>White Robins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="White Robins">
 
   <script src="https://use.typekit.net/vfv8ksc.js"></script>
@@ -12,21 +13,20 @@
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/butler" type="text/css"/>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/main.css">
 
   <script type="text/javascript">
-    // var first = "info";
-    // var last = "whiterobins.ie";
-    var first = "jessbnsn";
-    var last = "gmail.com";    
+    var first = "info";
+    var last = "whiterobins.ie";    
   </script>  
 </head>
 
+<body>
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#"><img src="images/logo.svg" alt="White Robins"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,7 +55,7 @@
                     <div class="col-xs-12 col-md-6">
                         <h1>Leave more than a memory</h1>
                         <h4>Our secure and easy to use platform enables your loved ones to access all your important information and personalised messages should the unexpected happen.</h4>
-                        <a class="btn btn-lg">Register your interest</a>
+                        <a class="btn btn-lg" href="#form">Register your interest</a>
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <div class="card" style="height: 250px;">
@@ -173,7 +173,8 @@
             </div>
         </section>
 
-        <section class="about" id="about">
+        <section class="about">
+            <div id="about" style="position: absolute; top: -50px; border: 1px solid transparent;"></div>
             <div class="container">
                 <div class="card">
                     <div class="photo"></div>
@@ -225,31 +226,32 @@
                 </div>              
             </div>
 
-            <hr id="form">
-        
-            <div class="card keep-me-posted">
-                <img src="images/keep-me-posted.svg">  
-                <h3>Keep me posted</h3> 
-                <p>Want to know more and try out our product when it launches?</p>
-                <form method="post" action="submit.php">
-                    <div class="form-group">
-                        <label for="nameInput">Your name</label>
-                        <input type="text" name="name" class="form-control" id="nameInput">
-                    </div>
 
-                    <!-- Important: if you add any fields to this page, you will also need to update the php script -->
-                    <!-- Anti spam trick. Spam bots will fill this out and our php script will not submit. Humans won't see it and therefore won't fill it out -->
-                    <p class="antispam">Leave this empty:
-                            <br /><input name="url" />
-                    </p>   
-
-                    <div class="form-group">
-                        <label for="emailInput">Email address</label>
-                        <input type="email" name="email" class="form-control left" id="emailInput">
-                        <button class="btn right" type="submit">Go</button>
-                    </div>                                  
-                </form>
-            </div>            
+            <div class="container">
+                <hr id="form">
+                <div class="card keep-me-posted">
+                    <img src="images/keep-me-posted.svg">  
+                    <h3>Keep me posted</h3> 
+                    <p>Want to know more and try out our product when it launches?</p>
+                    <form method="post" action="submit.php">
+                        <div class="form-group">
+                            <label for="nameInput">Your name</label>
+                            <input type="text" name="name" class="form-control" id="nameInput">
+                        </div>
+    
+                        <!-- Important: if you add any fields to this page, you will also need to update the php script -->
+                        <!-- Anti spam trick. Spam bots will fill this out and our php script will not submit. Humans won't see it and therefore won't fill it out -->
+                        <p class="antispam">Leave this empty:<br /><input name="url" /></p>   
+    
+                        <div class="form-group">
+                            <label for="emailInput">Email address</label>
+                            <input type="email" name="email" class="form-control left" id="emailInput">
+                            <button class="btn right" type="submit">Go</button>
+                        </div>                                  
+                    </form>
+                </div>  
+            </div>
+              
         </section>
         
     </main>
@@ -259,7 +261,10 @@
             <h4>
                 <span>Wendy Coyle (Founder &amp; CEO)</span>
                 <span>| Contact Us: </span>
-                <a href="mailto:info@whiterobins.ie?Subject=I%20am%20interested%20in%20White%20Robins">info@whiterobins.ie</a>
+                <script type="text/javascript">
+                    document.write('<a href="mailto:'+first + '@' + last+'">'+first + '@' + last+'<\/a>');
+                </script>
+                <noscript>Please enable javascript or use the contact form.</noscript>                
             </h4>
             <h3>
                 <img src="images/firework1.svg">
@@ -268,9 +273,20 @@
             </h3>
         </div>
         <div class="logo-strip">
-            img here
+            <img src="images/logo.svg" alt="White Robins">
             <p class="caption no-margin">All rights reserved</p>
         </div>
     </footer>
+
+    <!-- Smooth scrolling to anchors: -->
+    <script>
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+    </script>
 </body>
 </html>

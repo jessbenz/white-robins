@@ -1,6 +1,9 @@
 @import 'variables'; 
 @import 'mixins'; 
 
+body, html {
+    height: 100%;
+}
 body {
     font-size: 15px;
     color: black;
@@ -39,6 +42,7 @@ main {
     cursor: pointer;
     &:hover {
         background-color: #DE5B0D;
+        color: white;
     }
 }
 .btn-lg {
@@ -55,8 +59,17 @@ main {
 
 .navbar-light {
     @include shadow;
+    .navbar-brand img {
+        width: 280px;
+        height: auto;
+        margin: -5px 0 -10px 0;
+    }
     .navbar-nav .nav-link {
         color: black;
+        @include transition;
+        &:hover {
+            color: $primary-colour;
+        }
     }    
 }
 
@@ -80,6 +93,11 @@ main {
     @include shadow;
     @include rounded-corners(5px);
     padding: $card-padding;
+    &.card-narrow {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 section.headline {
@@ -134,6 +152,7 @@ section.about {
     background-color: #F4F1EE;
     padding: 3.5% 0 0 0;
     text-align: center;
+    position: relative;
     .card {
         position: relative;
         bottom: -30px;        
@@ -158,12 +177,13 @@ section.about {
 section.testimonials {
     background: top right url("../images/testimonials.jpg") no-repeat;
     background-size: cover;    
-    padding: 7% 0;
+    padding: 7% 0 0 0;
     h2 {
         color: white;
         margin-bottom: 0.8em;
     }
     .quote {
+        margin-bottom: 3em;
         .card {
             margin-bottom: $card-margin-bottom;
             position: relative;
@@ -187,30 +207,6 @@ section.testimonials {
                 left: 18px;
                 bottom: -16px;
                 z-index: 99;
-            }
-        }
-        .card.right-arrow {
-            & + .person {
-                span {
-                    float: right;
-                    margin-right: 0;
-                    margin-left: 12px;
-                }
-                p {
-                    text-align: right;
-                }                
-            }
-            &:before,
-            &:after {
-                left: auto;
-                right: 20px;
-                border-width: 0 20px 13px 0;
-                border-color: transparent white transparent transparent; 
-            }
-            &:after {
-                border-width: 0 25px 15px 0;
-                border-color: transparent rgba(0,0,0,0.2) transparent transparent;
-                right: 18px;
             }
         }
         .person {
@@ -244,12 +240,12 @@ section.testimonials {
     hr {
         max-width: 200px;
         border-top: 1px solid rgba(255,255,255,0.6);
-        margin: 4em auto;
+        margin: 1em auto 4em auto;
     }
     .keep-me-posted {
         max-width: 380px;
         text-align: center;
-        margin: 2em auto -12em auto;
+        margin: 2em auto -7em auto;
         position: relative;
         form {
             label {
@@ -264,6 +260,24 @@ section.testimonials {
             margin: -35px 0 1.3em 0;
         }
     }    
+}
+
+.thanks-page {
+    padding-top: 2em;
+    background-color: #F4F1EE;
+    height: 100%;
+    h1 {
+        margin-bottom: 0.2em;
+    }
+    .btn {
+        margin-top: 2em;
+        width: 120px;
+        margin: 2em auto 0 auto;
+        img {
+            width: 35px;
+            margin: -6px -5px -4px -15px;            
+        }
+    }
 }
 
 footer {
@@ -293,5 +307,48 @@ footer {
         background-color: white;
         padding: 0.5em 0.5em 0.6em 0.5em;
         color: black;
+        img {
+            width: 180px;
+            height: auto;
+            margin-right: -10px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    section.testimonials {
+        padding-top: 4em;
+    }
+}
+@media (max-width: 767px) {
+    section.headline .container {
+        padding-bottom: 7%;
+    }
+}
+
+@media (min-width: 576px) {
+    section.testimonials .quote .card.right-arrow {
+        & + .person {
+            span {
+                float: right;
+                margin-right: 0;
+                margin-left: 12px;
+            }
+            p {
+                text-align: right;
+            }                
+        }
+        &:before,
+        &:after {
+            left: auto;
+            right: 20px;
+            border-width: 0 20px 13px 0;
+            border-color: transparent white transparent transparent; 
+        }
+        &:after {
+            border-width: 0 25px 15px 0;
+            border-color: transparent rgba(0,0,0,0.2) transparent transparent;
+            right: 18px;
+        }
     }
 }

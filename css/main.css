@@ -1,5 +1,8 @@
 /* orange */
 /* orange */
+body, html {
+  height: 100%; }
+
 body {
   font-size: 15px;
   color: black;
@@ -42,7 +45,8 @@ main {
   cursor: pointer; }
   .btn:hover,
   .btn-lg:hover {
-    background-color: #DE5B0D; }
+    background-color: #DE5B0D;
+    color: white; }
 
 .btn-lg {
   font-size: 1.17em; }
@@ -58,8 +62,19 @@ main {
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5); }
+  .navbar-light .navbar-brand img {
+    width: 280px;
+    height: auto;
+    margin: -5px 0 -10px 0; }
   .navbar-light .navbar-nav .nav-link {
-    color: black; }
+    color: black;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #E46F25; }
 
 .left {
   float: left; }
@@ -84,6 +99,10 @@ main {
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 1.3em; }
+  .card.card-narrow {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto; }
 
 section.headline {
   background: center center #842D1B url("../images/hero.jpg") no-repeat;
@@ -130,7 +149,8 @@ section.mission {
 section.about {
   background-color: #F4F1EE;
   padding: 3.5% 0 0 0;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   section.about .card {
     position: relative;
     bottom: -30px; }
@@ -152,76 +172,63 @@ section.about {
 section.testimonials {
   background: top right url("../images/testimonials.jpg") no-repeat;
   background-size: cover;
-  padding: 7% 0; }
+  padding: 7% 0 0 0; }
   section.testimonials h2 {
     color: white;
     margin-bottom: 0.8em; }
-  section.testimonials .quote .card {
-    margin-bottom: 1.5em;
-    position: relative; }
-    section.testimonials .quote .card:before, section.testimonials .quote .card:after {
-      content: '';
-      position: absolute;
-      bottom: -13px;
-      left: 20px;
-      display: block;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 13px 20px 0 0;
-      border-color: white transparent transparent transparent;
-      z-index: 100; }
-    section.testimonials .quote .card:after {
-      border-width: 15px 25px 0 0;
-      border-color: rgba(0, 0, 0, 0.2) transparent transparent transparent;
-      left: 18px;
-      bottom: -16px;
-      z-index: 99; }
-  section.testimonials .quote .card.right-arrow + .person span {
-    float: right;
-    margin-right: 0;
-    margin-left: 12px; }
-  section.testimonials .quote .card.right-arrow + .person p {
-    text-align: right; }
-  section.testimonials .quote .card.right-arrow:before, section.testimonials .quote .card.right-arrow:after {
-    left: auto;
-    right: 20px;
-    border-width: 0 20px 13px 0;
-    border-color: transparent white transparent transparent; }
-  section.testimonials .quote .card.right-arrow:after {
-    border-width: 0 25px 15px 0;
-    border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent;
-    right: 18px; }
-  section.testimonials .quote .person span {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 1px solid white;
-    width: 60px;
-    height: 60px;
-    float: left;
-    margin-right: 12px; }
-  section.testimonials .quote .person p {
-    color: white;
-    margin: 0;
-    padding-top: 13px; }
-  section.testimonials .quote .person #one {
-    background: center center url("../images/alan.jpg") no-repeat;
-    background-size: cover; }
-  section.testimonials .quote .person #two {
-    background: center center url("../images/elizabeth.jpg") no-repeat;
-    background-size: cover; }
-  section.testimonials .quote .person #three {
-    background: center center url("../images/nicola.jpg") no-repeat;
-    background-size: cover; }
+  section.testimonials .quote {
+    margin-bottom: 3em; }
+    section.testimonials .quote .card {
+      margin-bottom: 1.5em;
+      position: relative; }
+      section.testimonials .quote .card:before, section.testimonials .quote .card:after {
+        content: '';
+        position: absolute;
+        bottom: -13px;
+        left: 20px;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 13px 20px 0 0;
+        border-color: white transparent transparent transparent;
+        z-index: 100; }
+      section.testimonials .quote .card:after {
+        border-width: 15px 25px 0 0;
+        border-color: rgba(0, 0, 0, 0.2) transparent transparent transparent;
+        left: 18px;
+        bottom: -16px;
+        z-index: 99; }
+    section.testimonials .quote .person span {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      border: 1px solid white;
+      width: 60px;
+      height: 60px;
+      float: left;
+      margin-right: 12px; }
+    section.testimonials .quote .person p {
+      color: white;
+      margin: 0;
+      padding-top: 13px; }
+    section.testimonials .quote .person #one {
+      background: center center url("../images/alan.jpg") no-repeat;
+      background-size: cover; }
+    section.testimonials .quote .person #two {
+      background: center center url("../images/elizabeth.jpg") no-repeat;
+      background-size: cover; }
+    section.testimonials .quote .person #three {
+      background: center center url("../images/nicola.jpg") no-repeat;
+      background-size: cover; }
   section.testimonials hr {
     max-width: 200px;
     border-top: 1px solid rgba(255, 255, 255, 0.6);
-    margin: 4em auto; }
+    margin: 1em auto 4em auto; }
   section.testimonials .keep-me-posted {
     max-width: 380px;
     text-align: center;
-    margin: 2em auto -12em auto;
+    margin: 2em auto -7em auto;
     position: relative; }
     section.testimonials .keep-me-posted form label {
       display: block;
@@ -230,6 +237,20 @@ section.testimonials {
       width: 75%; }
     section.testimonials .keep-me-posted img {
       margin: -35px 0 1.3em 0; }
+
+.thanks-page {
+  padding-top: 2em;
+  background-color: #F4F1EE;
+  height: 100%; }
+  .thanks-page h1 {
+    margin-bottom: 0.2em; }
+  .thanks-page .btn {
+    margin-top: 2em;
+    width: 120px;
+    margin: 2em auto 0 auto; }
+    .thanks-page .btn img {
+      width: 35px;
+      margin: -6px -5px -4px -15px; }
 
 footer {
   padding: 9em 0 0 0;
@@ -256,5 +277,32 @@ footer {
     background-color: white;
     padding: 0.5em 0.5em 0.6em 0.5em;
     color: black; }
+    footer .logo-strip img {
+      width: 180px;
+      height: auto;
+      margin-right: -10px; }
+
+@media (max-width: 900px) {
+  section.testimonials {
+    padding-top: 4em; } }
+@media (max-width: 767px) {
+  section.headline .container {
+    padding-bottom: 7%; } }
+@media (min-width: 576px) {
+  section.testimonials .quote .card.right-arrow + .person span {
+    float: right;
+    margin-right: 0;
+    margin-left: 12px; }
+  section.testimonials .quote .card.right-arrow + .person p {
+    text-align: right; }
+  section.testimonials .quote .card.right-arrow:before, section.testimonials .quote .card.right-arrow:after {
+    left: auto;
+    right: 20px;
+    border-width: 0 20px 13px 0;
+    border-color: transparent white transparent transparent; }
+  section.testimonials .quote .card.right-arrow:after {
+    border-width: 0 25px 15px 0;
+    border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent;
+    right: 18px; } }
 
 /*# sourceMappingURL=main.css.map */
