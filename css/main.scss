@@ -28,9 +28,6 @@ h4 {
     font-size: 1.2em;
     line-height: 1.4em;
 }
-main {
-    padding-top: 55px;
-}
 .btn,
 .btn-lg {
     @include rounded-corners(4px);
@@ -71,6 +68,9 @@ main {
             color: $primary-colour;
         }
     }    
+}
+.navbar.fixed-top + .spacer-for-nav {
+    height: 85px;
 }
 
 .left { 
@@ -142,14 +142,14 @@ section.mission {
     padding: 6% 0 14% 0;
     .mission-statement {
         @include rounded-corners(4px);
-        background-color: rgba(78,39,3,0.7);
-        color: white;
         padding: $card-padding;
+        background-color: rgba(110, 45, 0, 0.7);
+        color: white;
     }
 }
 
 section.about {
-    background-color: #F4F1EE;
+    background: #F9EACA;
     padding: 3.5% 0 0 0;
     text-align: center;
     position: relative;
@@ -281,8 +281,8 @@ section.testimonials {
 }
 
 footer {
-    padding: 9em 0 0 0;
     background-color: $primary-colour;
+    padding: 9em 0 0 0;
     color: white;
     text-align: center;
     h3 {
@@ -315,6 +315,16 @@ footer {
     }
 }
 
+@media (min-width: 1300px) {
+    section.services .container {
+        max-width: 90%;
+    }
+}
+@media (min-width: 1700px) {
+    section.services .container {
+        max-width: 1500px;
+    }
+}
 @media (max-width: 900px) {
     section.testimonials {
         padding-top: 4em;
@@ -323,6 +333,11 @@ footer {
 @media (max-width: 767px) {
     section.headline .container {
         padding-bottom: 7%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    section.mission .container {
+        max-width: 95%;
     }
 }
 
@@ -350,5 +365,94 @@ footer {
             border-color: transparent rgba(0,0,0,0.2) transparent transparent;
             right: 18px;
         }
+    }
+}
+
+@media (max-width: 575px) {
+    section {
+        text-align: center;
+    }
+    section.services {
+        padding-bottom: 0;
+        .service {
+            height: 86%;
+            margin-bottom: 1.9em;        
+        }        
+    }
+    section.mission {
+        background-position: -190px 10em;
+        padding-bottom: 40%;
+        background-color: #969DAD;
+        .mission-statement {
+            h2 {
+                font-weight: 400;
+            }
+        }             
+    }
+    section.testimonials {
+        h2 {
+            font-weight: 400;
+        }    
+        .quote .person {
+            width: 170px;
+            margin-left: auto;
+            margin-right: auto;
+            p {
+                text-align: left;
+            }                        
+        }
+        .quote .card:before,
+        .quote .card:after {
+            left: 50%;
+            border: solid transparent;
+            bottom: -30px;         
+        }
+        .quote .card:before {
+            border-color: rgba(255, 255, 255, 0);
+            border-top-color: #ffffff;
+            border-width: 15px;
+            margin-left: -15px;
+        }
+        .quote .card:after {
+            border-color: rgba(0, 0, 0, 0);
+            border-top-color: rgba(0, 0, 0, 0.2);
+            border-width: 16px;
+            margin-left: -16px;
+            bottom: -34px;
+        }        
+    }
+    .navbar-light {
+        .navbar-brand img {
+            width: 220px;
+        }        
+    }
+    .navbar.fixed-top + .spacer-for-nav {
+        height: 65px;
+    }
+}
+@media (max-width: 400px) {
+    footer h3 img {
+        display: none;
+    }
+}
+@media (max-width: 370px) {
+    section.mission {
+        background-position: -240px 10em;
+        padding-bottom: 65%;         
+    }    
+}
+@media (max-width: 340px) {
+    .navbar-light {
+        padding-left: 10px;
+        padding-right: 10px;
+        .navbar-brand {
+            margin-right: 0.2em;
+        }
+        .navbar-brand img {
+            width: 180px;
+        }        
+    }
+    .navbar.fixed-top + .spacer-for-nav {
+        height: 55px;
     }
 }

@@ -4,7 +4,7 @@
 if(isset($_POST['url']) && $_POST['url'] == ''){
 
 	// put the email we're sending to here
-	$youremail = 'wendi.coyle@gmail.com';
+	$youremail = 'info@whiterobins.ie';
 
 	// prepare a "pretty" version of the message
 	// Important: if you added any form fields to the HTML, you will need to add them here also
