@@ -98,7 +98,8 @@ h4 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  padding: 1.3em; }
+  padding: 1.3em;
+  opacity: 0.99; }
   .card.card-narrow {
     max-width: 400px;
     margin-left: auto;
@@ -186,7 +187,6 @@ section.testimonials {
         position: absolute;
         bottom: -13px;
         left: 20px;
-        display: block;
         width: 0;
         height: 0;
         border-style: solid;
@@ -198,7 +198,7 @@ section.testimonials {
         border-color: rgba(0, 0, 0, 0.2) transparent transparent transparent;
         left: 18px;
         bottom: -16px;
-        z-index: 99; }
+        z-index: 0; }
     section.testimonials .quote .person span {
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;

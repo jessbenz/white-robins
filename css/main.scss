@@ -93,6 +93,7 @@ h4 {
     @include shadow;
     @include rounded-corners(5px);
     padding: $card-padding;
+    opacity: 0.99;
     &.card-narrow {
         max-width: 400px;
         margin-left: auto;
@@ -193,7 +194,6 @@ section.testimonials {
                 position: absolute;
                 bottom: -13px;
                 left: 20px;
-                display: block;
                 width: 0;
                 height: 0;
                 border-style: solid;
@@ -206,7 +206,7 @@ section.testimonials {
                 border-color: rgba(0,0,0,0.2) transparent transparent transparent;
                 left: 18px;
                 bottom: -16px;
-                z-index: 99;
+                z-index: 0;
             }
         }
         .person {
